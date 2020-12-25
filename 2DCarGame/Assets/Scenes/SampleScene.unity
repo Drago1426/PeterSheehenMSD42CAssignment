@@ -462,6 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1724474501}
   - component: {fileID: 1724474500}
+  - component: {fileID: 1724474502}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -534,6 +535,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1724474502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724474499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a747de85e77aa74e83d29171be3b187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
 --- !u!1 &2076255822
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +559,7 @@ GameObject:
   - component: {fileID: 2076255824}
   - component: {fileID: 2076255823}
   m_Layer: 0
-  m_Name: 2d-top-down-highway-background-opengameartorg-road-png-top-down-840_650
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
