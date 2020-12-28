@@ -23,11 +23,11 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        var deltaX = Input.GetAxis("Horizontal");
+        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
 
         var newXpos = transform.position.x + deltaX;
 
-        var deltaY = Input.GetAxis("Vertical");
+        var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         var newYPos = transform.position.y + deltaY;
 
         this.transform.position = new Vector2(newXpos, newYPos);
