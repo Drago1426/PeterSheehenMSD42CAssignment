@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] float moveSpeed = 10f;
 
-    float xMin, xMax, yMin, yMax;
+    float xMin, xMax;
 
     // Start is called before the first frame update
     void Start()
@@ -19,18 +19,24 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+        ViewPortToWorldPoint();
+    }
+
+    private void ViewPortToWorldPoint()
+    {
+        Camera gameCamera = Camera.main;
+
+        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
+        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
     }
 
     private void Move()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
 
-        var newXpos = transform.position.x + deltaX;
+        var newXpos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
 
-        var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
-        var newYPos = transform.position.y + deltaY;
-
-        this.transform.position = new Vector2(newXpos, newYPos);
+        this.transform.position = new Vector2(newXpos, transform.position.y);
 
     }
 }
