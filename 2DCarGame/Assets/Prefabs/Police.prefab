@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8561275730759742736}
   - component: {fileID: 8561275730759742743}
-  m_Layer: 0
+  - component: {fileID: -3603260557292043886}
+  - component: {fileID: -2220011523641153758}
+  m_Layer: 9
   m_Name: Police
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,3 +84,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3603260557292043886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561275730759742742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b85bcb9a7ef93d41998075c9e2acec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  waveConfig: {fileID: 11400000, guid: 2c170dd9de766a74f9b90149711e6452, type: 2}
+--- !u!114 &-2220011523641153758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561275730759742742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3730570f03233459804367c1ec9661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  objectBulletPrefab: {fileID: 5525109593913079321, guid: 4d044fda29a050b4b9651c59a37f4465, type: 3}
+  objectBulletSpeed: 10
+  objectBulletDamage: 1
+  shoot: 1
