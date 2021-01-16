@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: 82d28adb22a3036409fb787d8ba2c258, type: 2}
+  gamePointsOn: 1
 --- !u!114 &-2470525133367209263
 MonoBehaviour:
   m_ObjectHideFlags: 0

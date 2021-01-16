@@ -8,7 +8,11 @@ public class ObstaclePathing : MonoBehaviour
 
     [SerializeField] WaveConfig waveConfig;
 
+    [SerializeField] bool gamePointsOn;
+
     int waypointIndex = 0;
+
+    int gamePoints = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +48,15 @@ public class ObstaclePathing : MonoBehaviour
         else
         {
             Destroy(gameObject);
+
+            if (gamePointsOn)
+            {
+                gamePoints = gamePoints + 1;
+            }
+            else
+            {
+
+            }
         }
     }
 
