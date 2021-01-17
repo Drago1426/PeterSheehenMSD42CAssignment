@@ -39,6 +39,8 @@ public class Player : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+
+        FindObjectOfType<Level>().LoadGameOver();
     }
 
     // Start is called before the first frame update

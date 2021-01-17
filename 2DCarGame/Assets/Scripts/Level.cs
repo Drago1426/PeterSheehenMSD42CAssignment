@@ -27,6 +27,7 @@ public class Level : MonoBehaviour
 
     public void QuitGame()
     {
+        print("Quitting Game");
         Application.Quit();
     }
 }

@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 569967484}
   - component: {fileID: 569967483}
   m_Layer: 5
-  m_Name: StartButton (1)
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,8 +215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: -219}
-  m_SizeDelta: {x: 285.22534, y: 72.27814}
+  m_AnchoredPosition: {x: 24, y: -418}
+  m_SizeDelta: {x: 639.63306, y: 72.27814}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &569967483
 MonoBehaviour:
@@ -263,7 +263,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 325331829284680149, guid: f076bf93b07bf11419437e49cb8818da, type: 3}
         m_TargetAssemblyTypeName: Level, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: LoadStartMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d808d56f8ceccfa479f3e4449163e076, type: 2}
   m_sharedMaterial: {fileID: -5741725766241541751, guid: d808d56f8ceccfa479f3e4449163e076, type: 2}
@@ -320,8 +320,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to 2D Car Game
+  m_text: Game Over
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d808d56f8ceccfa479f3e4449163e076, type: 2}
   m_sharedMaterial: {fileID: -5741725766241541751, guid: d808d56f8ceccfa479f3e4449163e076, type: 2}
@@ -564,8 +564,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294964111
-  m_fontColor: {r: 0.5613208, g: 0.9516468, b: 1, a: 1}
+    rgba: 4280625151
+  m_fontColor: {r: 1, g: 0.15410323, b: 0.1462264, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -582,8 +582,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 110
+  m_fontSizeBase: 110
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 1641353328}
   - component: {fileID: 1641353327}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: PlayAgainButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -667,8 +667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 23.1}
-  m_SizeDelta: {x: 477.3407, y: 96.29256}
+  m_AnchoredPosition: {x: 20, y: -213}
+  m_SizeDelta: {x: 732.55676, y: 96.29256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1641353327
 MonoBehaviour:
@@ -745,7 +745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Play Again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d808d56f8ceccfa479f3e4449163e076, type: 2}
   m_sharedMaterial: {fileID: -5741725766241541751, guid: d808d56f8ceccfa479f3e4449163e076, type: 2}
@@ -772,8 +772,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 110
-  m_fontSizeBase: 110
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
