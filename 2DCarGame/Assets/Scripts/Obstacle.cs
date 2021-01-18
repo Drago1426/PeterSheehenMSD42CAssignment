@@ -18,6 +18,9 @@ public class Obstacle : MonoBehaviour
 
     [SerializeField] float objectBulletDamage = 1f;
 
+    [SerializeField] AudioClip objectDeathSound;
+    [SerializeField] [Range(0, 1)] float objectDeathSoundVolume = 0.75f;
+
     [SerializeField] bool shoot = false;
 
     private void OnTriggerEnter2D(Collider2D otherObject)
@@ -45,6 +48,7 @@ public class Obstacle : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(objectDeathSound, Camera.main.transform.position, objectDeathSoundVolume);
     }
 
     void Start()

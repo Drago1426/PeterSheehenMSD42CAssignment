@@ -612,7 +612,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Over
+  m_text: Winner!!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d808d56f8ceccfa479f3e4449163e076, type: 2}
   m_sharedMaterial: {fileID: -5741725766241541751, guid: d808d56f8ceccfa479f3e4449163e076, type: 2}
@@ -621,8 +621,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280625151
-  m_fontColor: {r: 1, g: 0.15410323, b: 0.1462264, a: 1}
+    rgba: 4280664319
+  m_fontColor: {r: 1, g: 0.75363714, b: 0.14509803, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

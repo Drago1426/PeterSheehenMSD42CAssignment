@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.7f;
 
+    [SerializeField] AudioClip playerDeathSound;
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
+
     float xMin, xMax;
 
 
@@ -39,8 +42,9 @@ public class Player : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
-
-        FindObjectOfType<Level>().LoadGameOver();
+        AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+        
+        //FindObjectOfType<Level>().LoadGameOver();
     }
 
     // Start is called before the first frame update
