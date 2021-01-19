@@ -122,6 +122,10 @@ MonoBehaviour:
   objectBulletPrefab: {fileID: 0}
   objectBulletSpeed: 0.3
   objectBulletDamage: 1
+  deathVFX: {fileID: 5595129480608944517, guid: 9f1cc0ef059b66e4f991eb2385be4afc, type: 3}
+  explosionDuration: 1
+  objectDeathSound: {fileID: 8300000, guid: c696309f249db3c4682bb4282e41ed4f, type: 3}
+  objectDeathSoundVolume: 0.55
   shoot: 0
 --- !u!60 &7479061304097108694
 PolygonCollider2D:

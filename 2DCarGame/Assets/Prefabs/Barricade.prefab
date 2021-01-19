@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8327799777921886722}
   - component: {fileID: 2596441357629862330}
-  - component: {fileID: 862794937344266342}
   - component: {fileID: -8114543865603954961}
+  - component: {fileID: 862794937344266342}
   - component: {fileID: -7655361515071235103}
   - component: {fileID: -4343579603757536635}
   - component: {fileID: -3733699910482353358}
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &862794937344266342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2661742249029013595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b85bcb9a7ef93d41998075c9e2acec5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints: []
-  waveConfig: {fileID: 11400000, guid: 8382e2229fcea9d45b680b70608349bd, type: 2}
-  gamePointsOn: 1
 --- !u!60 &-8114543865603954961
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -137,6 +122,21 @@ PolygonCollider2D:
       - {x: 2.195, y: 0.655}
       - {x: 2.195, y: 0.105}
       - {x: -2.195, y: 0.105}
+--- !u!114 &862794937344266342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661742249029013595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b85bcb9a7ef93d41998075c9e2acec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  waveConfig: {fileID: 11400000, guid: 8382e2229fcea9d45b680b70608349bd, type: 2}
+  gamePointsOn: 1
 --- !u!114 &-7655361515071235103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,8 +156,10 @@ MonoBehaviour:
   objectBulletPrefab: {fileID: 0}
   objectBulletSpeed: 0.3
   objectBulletDamage: 1
+  deathVFX: {fileID: 5595129480608944517, guid: 9f1cc0ef059b66e4f991eb2385be4afc, type: 3}
+  explosionDuration: 1
   objectDeathSound: {fileID: 8300000, guid: c251d48f089ff1740980121de2ba6aa3, type: 3}
-  objectDeathSoundVolume: 1
+  objectDeathSoundVolume: 0.45
   shoot: 0
 --- !u!114 &-4343579603757536635
 MonoBehaviour:

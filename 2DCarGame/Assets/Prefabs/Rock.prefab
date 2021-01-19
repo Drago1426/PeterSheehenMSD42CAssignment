@@ -121,6 +121,8 @@ MonoBehaviour:
   objectBulletPrefab: {fileID: 0}
   objectBulletSpeed: 0.3
   objectBulletDamage: 1
+  deathVFX: {fileID: 5595129480608944517, guid: 9f1cc0ef059b66e4f991eb2385be4afc, type: 3}
+  explosionDuration: 1
   objectDeathSound: {fileID: 8300000, guid: e54c6034bef0a7a49be4e7819140296a, type: 3}
   objectDeathSoundVolume: 0.75
   shoot: 0

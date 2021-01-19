@@ -18,6 +18,9 @@ public class Obstacle : MonoBehaviour
 
     [SerializeField] float objectBulletDamage = 1f;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
+
     [SerializeField] AudioClip objectDeathSound;
     [SerializeField] [Range(0, 1)] float objectDeathSoundVolume = 0.75f;
 
@@ -25,7 +28,7 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
-        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+        DamageDealer dmgDealer = otherObject.GetComponent<DamageDealer>();
 
         if (!dmgDealer)
         {
@@ -41,13 +44,19 @@ public class Obstacle : MonoBehaviour
 
         if (health <= 0)
         {
+            print("it works 222");
             Die();
         }
     }
 
-    private void Die()
+    public void Die()
     {
         Destroy(gameObject);
+
+        print("it works");
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
+
         AudioSource.PlayClipAtPoint(objectDeathSound, Camera.main.transform.position, objectDeathSoundVolume);
     }
 

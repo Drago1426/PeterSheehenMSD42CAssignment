@@ -47,17 +47,7 @@ public class ObstaclePathing : MonoBehaviour
         }
         else
         {
-            if (gamePointsOn)
-            {
-                Destroy(gameObject);
-                gamePoints++;
-                print("Current Points: "+ gamePoints);
-            }
-            else
-            {
-                Destroy(gameObject);
-                print("No points gained");
-            }
+            Destroy(gameObject);
         }
     }
 

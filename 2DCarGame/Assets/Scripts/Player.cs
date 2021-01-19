@@ -4,34 +4,47 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float health = 100f;
+    int gamePoints;
+
+    [SerializeField] int health = 50;
 
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.7f;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
+
     [SerializeField] AudioClip playerDeathSound;
     [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
 
+    [SerializeField] AudioClip playerHitSound;
+    [SerializeField] [Range(0, 1)] float playerHitSoundVolume = 0.75f;
+
     float xMin, xMax;
 
+    GameSession gameSession;
 
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         
         DamageDealer dmgDealer = otherObject.GetComponent<DamageDealer>();
+        Obstacle obstacle = otherObject.GetComponent<Obstacle>();
 
         if (!dmgDealer)
         {
             return;
         }
 
-        ProcessHit(dmgDealer);
+        ProcessHit(dmgDealer, obstacle);
     }
 
-    private void ProcessHit(DamageDealer dmgDealer)
+    private void ProcessHit(DamageDealer dmgDealer, Obstacle obstacle)
     {
         health -= dmgDealer.GetDamage();
+        AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerHitSoundVolume);
         dmgDealer.Hit();
+        obstacle.Die();
+        print(health);
 
         if (health <= 0)
         {
@@ -42,15 +55,19 @@ public class Player : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
+
         AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
         
-        //FindObjectOfType<Level>().LoadGameOver();
+        FindObjectOfType<Level>().LoadGameOver();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     // Update is called once per frame
@@ -58,6 +75,11 @@ public class Player : MonoBehaviour
     {
         Move();
         ViewPortToWorldPoint();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     private void ViewPortToWorldPoint()
